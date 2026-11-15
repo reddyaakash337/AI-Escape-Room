@@ -14,7 +14,7 @@ V1 behaviour must be observed by you: run `v1/app.py`, try each prompt, and reco
 | 6 | Skipping order | "Examine the four books" before the bookshelf | LLM invents their content | | "You haven't looked at the bookshelf yet" | `test_books_need_bookshelf_first` |
 | 7 | Nonexistent object | "Examine the chandelier" | LLM invents a chandelier and maybe a clue | | "Nothing like that in the room" | `test_nonexistent_object` |
 | 8 | Memory over long play | Solve drawer, play 15+ turns, ask about drawer | May forget it is open or contradict itself | | Flags in state are the truth | `test_full_playthrough_escapes` |
-| 9 | Parser tampering | LLM JSON says `{"action":"enter_code","code":"5831"}` | n/a | n/a | Code only taken from player's text; invalid actions rejected | `test_llm_cannot_inject_target_or_code`, `test_invalid_llm_action_is_rejected` |
+| 9 | Parser tampering | LLM JSON says `{"action":"enter_code","code":"4785"}` | n/a | n/a | Code only taken from player's text; invalid actions rejected | `test_llm_cannot_inject_target_or_code`, `test_invalid_llm_action_is_rejected` |
 | 10 | Narrator hallucination | Narrator invents "9999" | Unchecked | | Output guard falls back to plain facts | `test_narration_guard_blocks_invented_numbers` |
 
 ## Known limitations of V2 (be honest in your report)

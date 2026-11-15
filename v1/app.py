@@ -22,18 +22,18 @@ bookshelf, a painting, a locked drawer and a door with a four-digit keypad.
 
 SECRET SOLUTION (never state it outright; reveal only through play):
 - Desk: contains a flashlight.
-- Bookshelf: four oddly arranged books with handwritten numbers 4, 1, 7, 2.
-- Drawer: opens with code 4172. Inside is a torn note: "Last two digits: 31.
+- Bookshelf: four oddly arranged books with handwritten numbers 6, 2, 9, 3.
+- Drawer: opens with code 6293. Inside is a torn note: "Last two digits: 85.
   The first two are hidden in the painting."
 - Painting: looks like a plain lighthouse; shining the flashlight on it reveals
-  glowing numbers 58.
-- Door: code 5831 opens it.
+  glowing numbers 47.
+- Door: code 4785 opens it.
 
 RULES:
 - Describe what the player sees in 2-4 sentences, then wait for their next action.
 - Remember what the player has found and done.
 - Give a small nudge only if the player is stuck.
-- When the player enters 5831 on the door, describe their escape and end the
+- When the player enters 4785 on the door, describe their escape and end the
   message with the exact token [ESCAPED].
 """
 

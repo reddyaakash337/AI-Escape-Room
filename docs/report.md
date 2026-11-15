@@ -1,7 +1,7 @@
 # Report - AI-Powered Escape Room (≈2 pages)
 
 ## 1. Design
-The game takes place in a locked library with six interactive things (desk, bookshelf, books, painting, drawer, door) and two items (flashlight, note). The solution chain: the desk holds a **flashlight**; the bookshelf's four odd books show **4-1-7-2**, the drawer code; the drawer holds a **note** saying the last two door digits are **31** and the first two are in the painting; the **flashlight** reveals **58** on the painting; the door code is **5831**. That gives three puzzles plus a final escape challenge. Stack: Python, Streamlit, Google Gemini (free tier), pytest.
+The game takes place in a locked library with six interactive things (desk, bookshelf, books, painting, drawer, door) and two items (flashlight, note). The solution chain: the desk holds a **flashlight**; the bookshelf's four odd books show **6-2-9-3**, the drawer code; the drawer holds a **note** saying the last two door digits are **85** and the first two are in the painting; the **flashlight** reveals **47** on the painting; the door code is **4785**. That gives three puzzles plus a final escape challenge. Stack: Python, Streamlit, Google Gemini (free tier), pytest.
 
 ## 2. Version 1
 V1 puts the whole scenario, including the solutions, into a system prompt. Gemini acts as Game Master, and the chat history is the only memory. A `[ESCAPED]` token tells the app the player won. This works well for cooperative play, is under 100 lines, and produces engaging narration.

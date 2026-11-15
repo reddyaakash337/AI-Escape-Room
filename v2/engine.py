@@ -12,7 +12,7 @@ CONFIG = {
               "tall bookshelf, a painting, a small drawer and a door with a "
               "four-digit keypad surround you. Find the clues and escape."),
     # Secrets live ONLY here. They are never sent to the LLM.
-    "secrets": {"drawer_code": "4172", "door_code": "5831"},
+    "secrets": {"drawer_code": "6293", "door_code": "4785"},
     "objects": {
         "desk": {"aliases": ["desk", "table"]},
         "bookshelf": {"aliases": ["bookshelf", "shelf", "shelves", "bookcase"]},
@@ -199,10 +199,10 @@ def _examine(state, obj, item):
     if obj == "bookshelf":
         return _res(True, "A tall bookshelf. Four books are pulled out slightly and arranged differently from the rest.")
     if obj == "books":
-        return _res(True, "Each of the four odd books has a handwritten number on its spine. Left to right: 4, 1, 7, 2.")
+        return _res(True, "Each of the four odd books has a handwritten number on its spine. Left to right: 6, 2, 9, 3.")
     if obj == "painting":
         if f["painting_revealed"]:
-            return _res(True, "The lighthouse painting glows under the flashlight, revealing painted numbers: 58.")
+            return _res(True, "The lighthouse painting glows under the flashlight, revealing painted numbers: 47.")
         return _res(True, "A dark painting of a lighthouse at night. Something about it looks oddly dim, as if it hides more than it shows.")
     if obj == "drawer":
         if f["drawer_unlocked"]:
@@ -232,7 +232,7 @@ def _reveal(state, item):
 def _item_text(item):
     if item == "flashlight":
         return "A small steel flashlight, still working."
-    return 'The torn note reads: "Last two digits: 31. The first two are hidden in the painting."'
+    return 'The torn note reads: "Last two digits: 85. The first two are hidden in the painting."'
 
 
 def _take(state, item):
@@ -256,11 +256,11 @@ def _use(state, item, obj):
         return _res(False, "The player must say what to use the item on.")
     if item == "flashlight" and obj == "painting":
         if state["flags"]["painting_revealed"]:
-            return _res(True, "The numbers 58 are still glowing on the painting.")
+            return _res(True, "The numbers 47 are still glowing on the painting.")
         state["flags"]["painting_revealed"] = True
         if "painting" not in state["examined"]:
             state["examined"].append("painting")
-        return _res(True, "The flashlight beam reveals glowing painted numbers on the lighthouse: 58.")
+        return _res(True, "The flashlight beam reveals glowing painted numbers on the lighthouse: 47.")
     return _res(False, f"Using the {item} on the {obj} has no effect.")
 
 
