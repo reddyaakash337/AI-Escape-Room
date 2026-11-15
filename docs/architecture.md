@@ -6,7 +6,7 @@ flowchart LR
     P[Player] -->|natural language| UI[Streamlit chat UI]
     UI -->|message| CH[Gemini chat session<br/>history = only memory]
     SP[System prompt<br/>room + puzzles + SOLUTIONS] --> CH
-    CH -->|narration + '[ESCAPED]' token| UI
+    CH -->|narration + ESCAPED token| UI
     UI --> P
 ```
 State, rules, secrets and win detection all live inside the LLM's context.

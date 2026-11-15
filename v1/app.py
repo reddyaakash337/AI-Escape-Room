@@ -61,7 +61,7 @@ def reset():
 
 
 st.set_page_config(page_title="AI Escape Room v1", page_icon="🗝️")
-st.title("🗝️ AI Escape Room - Version 1")
+st.title(" AI Escape Room - Version 1")
 if not os.getenv("GEMINI_API_KEY"):
     st.error("Set GEMINI_API_KEY in your .env file (see .env.example).")
     st.stop()
@@ -71,7 +71,7 @@ if "chat" not in st.session_state:
 with st.sidebar:
     st.markdown("**How to play**\n\nType actions like *examine the bookshelf*, "
                 "*take the flashlight*, *try 1234 on the drawer*.")
-    if st.button("🔄 Restart game"):
+    if st.button(" Restart game"):
         reset()
         st.rerun()
 
@@ -79,7 +79,7 @@ for role, text in st.session_state.messages:
     st.chat_message(role).write(text)
 
 if st.session_state.escaped:
-    st.success("🎉 You escaped! Press Restart to play again.")
+    st.success(" You escaped! Press Restart to play again.")
 elif prompt := st.chat_input("What do you do?"):
     st.session_state.messages.append(("user", prompt))
     try:
