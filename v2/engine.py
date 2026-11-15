@@ -8,9 +8,11 @@ import re
 
 # ---------------------------------------------------------------- configuration
 CONFIG = {
-    "intro": ("You wake up on a cold floor in a dim, locked library. A desk, a "
-              "tall bookshelf, a painting, a small drawer and a door with a "
-              "four-digit keypad surround you. Find the clues and escape."),
+    "intro": ("You come to on the cold floor of an old library, long after closing time. "
+              "The lights are low and every exit is locked. Around you are a writing desk, "
+              "a tall bookshelf, a framed painting, a small locked drawer and a heavy door "
+              "with a four-digit keypad. Search the room, connect the clues and find a way "
+              "out. Tell me what you want to do."),
     # Secrets live ONLY here. They are never sent to the LLM.
     "secrets": {"drawer_code": "6293", "door_code": "4785"},
     "objects": {
